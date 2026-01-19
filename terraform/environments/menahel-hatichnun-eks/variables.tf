@@ -1,24 +1,3 @@
-
-##################################################
-# DATA Sources block
-##################################################
-
-variable "data_aws_vpc_gitlab_runners_name" {
-  description = "DataSource - AWS VPC name"
-  type        = string
-}
-
-variable "data_aws_subnet_gitlab_runners_1a_name" {
-  description = "DataSource - AWS SUBNET Service name"
-  type        = string
-}
-
-variable "data_aws_subnet_gitlab_runners_1b_name" {
-  description = "DataSource - AWS SUBNET Service name"
-  type        = string
-}
-
-
 # ##############################
 # # IAM
 # ##############################
@@ -142,25 +121,6 @@ variable "eks_cluster_vpc_config_public_access_cidrs" {
   default     = []
 }
 
-##################################################
-# EKS Access
-##################################################
-
-variable "eks_access_entry_principal_arn" {
-  description = "EKS Access Entry Role Name"
-  type        = string
-}
-
-variable "eks_access_entry_type" {
-  description = "EKS Access Entry TYPE Name"
-  type        = string
-}
-
-variable "eks_access_entry_user_name" {
-  description = "EKS Access Entry USER NAME"
-  type        = string
-}
-
 #----------------------- policy association  -------------------------------
 
 variable "eks_access_policy_association_policy_arn_EKSAdminPolicy" {
@@ -281,105 +241,4 @@ variable "eks_node_group_scaling_config_max_size" {
 variable "eks_node_group_scaling_config_min_size" {
   description = "EKS Node Group Scaling Config min size"
   type        = number
-}
-
-##################################################
-# EC2 Instance block
-##################################################
-
-variable "ec2_ami_image" {
-  description = "The EC2 AMI machine image NAME"
-  type        = string
-}
-
-variable "availability_zone_name" {
-  description = "The EC2 instance availability zone name"
-  type        = string
-}
-
-variable "ec2_instance_type" {
-  description = "The EC2 INSTANCE machine TYPE name"
-  type        = string
-}
-
-
-variable "ec2_instance_monitoring" {
-  description = "The EC2 INSTANCE monitoring FLAG"
-  type        = bool
-}
-
-variable "ec2_eks_mng_role_name" {
-  description = "role name"
-  type        = string
-}
-
-variable "ec2_eks_mng_description" {
-  description = "role description"
-  type        = string
-}
-
-
-
- 
-
-
-##################################################
-# IAM ROLE for RUNNER
-##################################################
-
-variable "netskope_prod_role_name" {
-  description = "role name"
-  type        = string
-}
- 
-variable "netskope_prod_description" {
-  description = "role description"
-  type        = string
-}
-
-variable "netskope_prod_policy_name" {
-  description = "policy name"
-  type        = string
-}
-
-variable "netskope_prod_policy_description" {
-  description = "policy description"
-  type        = string
-}
-
-##################### test-shay ######################
-variable "test_shay_role_name" {
-  description = "role name"
-  type        = string
-}
-
-variable "test_shay_role_name_main" {
-  description = "role name"
-  type        = string
-}
-
-variable "test_shay_policy_name" {
-  description = "policy name"
-  type        = string
-}
-
-#######################SPLUNK###########################
-variable "splunk_prod_role_name" {
-  description = "role name"
-  type        = string
-}
- 
-variable "splunk_prod_description" {
-  description = "role description"
-  type        = string
-}
-
-variable "splunk_prod_policy_name" {
-  description = "policy name"
-  type        = string
-}
-
-variable "splunk_prod_policy_description" {
-  description = "policy description"
-  type        = string
 }
