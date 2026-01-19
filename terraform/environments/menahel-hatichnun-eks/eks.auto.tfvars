@@ -11,7 +11,6 @@ iam_eks_AmazonEKS_CNI_Policy_policy_arn               = "arn:aws:iam::aws:policy
 iam_eks_AmazonEC2ContainerRegistryReadOnly_policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
 iam_eks_AmazonSSMManagedInstanceCore_policy_arn       = "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
 
-
 ##################################################
 # EKS Cluster
 ##################################################
